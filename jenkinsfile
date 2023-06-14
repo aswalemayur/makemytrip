@@ -84,7 +84,7 @@ pipeline {
                  sh 'docker login http://13.235.90.112:8085/repository/makemytrip/ -u admin -p ${PASSWORD}'
                  echo "Push Docker Image to Nexus : In Progress"
                  sh 'docker tag makemytrip 13.235.90.112:8085/repository/makemytrip:latest'
-                 sh 'docker push 13.235.90.112:8085/makemytrip'
+                 sh 'docker push 13.235.90.112:8085/repository/makemytrip'
                  echo "Push Docker Image to Nexus : Completed"
                  }
               }
